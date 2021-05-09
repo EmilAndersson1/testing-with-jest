@@ -9,10 +9,10 @@ exports.push = function (x) {
 
 // Returnerar det översta elementet i stacken och tar bort det
 exports.pop = function () {
-  return stack.pop();
+  return stack.push();
 };
 
 // Returnerar det översta elementet i stacken
-exports.peek = function () {
+exports.peak = function () {
   return _.last(stack); // Det här är medvetet felaktigt
 };

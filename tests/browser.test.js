@@ -33,3 +33,9 @@ describe('Clicking "Pusha till stacken"', () => {
     await alert.accept();
   });
 });
+
+test("if added pushed element is on top of stack", async () => {
+  await driver.findElement(By.id("peek")).click();
+  let text = await driver.findElement(By.id("top_of_stack")).getText();
+  expect(text).toEqual("Bananer");
+});
