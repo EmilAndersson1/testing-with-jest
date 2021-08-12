@@ -18,8 +18,13 @@ test("peek on stack with two or more elements returns the top element", () => {
   expect(stack.peek()).toBe(42);
 });
 
-test("push one element to stack, pop on stack, return popped element", () => {
+test("push four elements to stack, pop one element, returns the top element, push one element, pop it, pop stack again, return top element (3).", () => {
   stack.push(1);
-  expect(stack.peek()).toBeDefined();
-  expect(stack.pop()).toBe(1);
+  stack.push(2);
+  stack.push(3);
+  stack.push(4);
+  expect(stack.pop()).toBe(4);
+  stack.push(5);
+  stack.pop();
+  expect(stack.pop()).toBe(3);
 });
